@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        :root {
+            --primary-navy: #1a237e;
+            --primary-orange: #f57c00;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+        
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; background: #f4f6f8; }
+
+        .driver-header {
+            background: var(--primary-navy);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .order-card {
+            background: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid var(--primary-orange);
+        }
+
+        .order-card h3 {
+            margin: 0 0 10px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            align-items: center;
+        }
+
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+        .badge-warning { background: #fef08a; color: #854d0e; }
+        .badge-success { background: #bbf7d0; color: #166534; }
+
+        .detail-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+        
+        .detail-row i {
+            color: #6b7280;
+            margin-top: 2px;
+        }
+
+        .action-row {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-map {
+            background: #e0f2fe;
+            color: #0284c7;
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .btn-done {
+            background: #dcfce7;
+            color: #16a34a;
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .logout-link {
+            display: block; 
+            text-align: center; 
+            margin: 30px; 
+            color: #ef4444; 
+            font-weight: 600;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="driver-header">
+        <div style="font-weight: 700; font-size: 1.1rem;">KR DRIVER APP</div>
+        <div style="font-size: 0.9rem; opacity: 0.9;">Hello, Alex Driver</div>
+    </header>
+
+    <div style="padding: 20px 15px 5px 15px;">
+        <h2 style="margin: 0; font-size: 1.25rem; color: var(--primary-navy);">Your Deliveries</h2>
+    </div>
+
+    <!-- Static Preview Data -->
+    <div class="order-card">
+        <h3>
+            <span>Order #ORD-1045</span>
+            <span class="badge badge-warning">PENDING</span>
+        </h3>
+        <div class="detail-row">
+            <i class="ph-fill ph-map-pin"></i>
+            <div style="white-space: pre-line;">123 Anna Nagar, 4th Street
+Madurai, TN 625020</div>
+        </div>
+        <div class="action-row">
+            <a href="#" class="btn-map">
+                <i class="ph-fill ph-navigation-arrow"></i> NAVIGATE
+            </a>
+            <button class="btn-done">
+                <i class="ph-fill ph-check"></i> COMPLETE
+            </button>
+        </div>
+    </div>
+
+    <div class="order-card" style="border-left-color: #22c55e;">
+        <h3>
+            <span>Order #ORD-1042</span>
+            <span class="badge badge-success">DELIVERED</span>
+        </h3>
+        <div class="detail-row">
+            <i class="ph-fill ph-map-pin"></i>
+            <div style="white-space: pre-line;">45 KK Nagar
+Madurai, TN 625020</div>
+        </div>
+        <div class="action-row">
+            <a href="#" class="btn-map">
+                <i class="ph-fill ph-navigation-arrow"></i> NAVIGATE
+            </a>
+        </div>
+    </div>
+
+    <a href="#" class="logout-link">Logout</a>
+
+</body>
+
+</html>
